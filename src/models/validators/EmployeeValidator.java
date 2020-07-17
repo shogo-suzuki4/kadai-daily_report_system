@@ -32,11 +32,9 @@ public class EmployeeValidator {
 
 
     private static String _validateCode(String code, Boolean code_duplicate_check_flag) {
-
         if(code == null || code.equals("")) {
             return "社員番号を入力してください。";
         }
-
 
         if(code_duplicate_check_flag) {
             EntityManager em = DBUtil.createEntityManager();
